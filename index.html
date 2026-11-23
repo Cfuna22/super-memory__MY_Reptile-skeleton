@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Procedural Reptile Interactive Cursor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="container">
+    <div id="canvas-wrapper">
+      <canvas id="viewport"></canvas>
+    </div>
+    
+    <!-- Minimal HUD / Control Overlay -->
+    <div id="hud">
+      <div class="hud-header">
+        <span class="status-indicator"></span>
+        <span class="title">REPTILE PROCEDURAL CURSOR</span>
+      </div>
+      <div class="hud-controls">
+        <div class="preset-group">
+          <button class="btn active" data-preset="reptile">Reptile (5 pairs)</button>
+          <button class="btn" data-preset="lizard">Classic Lizard (2 pairs)</button>
+          <button class="btn" data-preset="centipede">Centipede (8 pairs)</button>
+          <button class="btn" data-preset="snake">Serpent (No legs)</button>
+        </div>
+        <div class="toggle-group">
+          <label class="control-label">
+            <span>Speed:</span>
+            <input type="range" id="speedSlider" min="2" max="15" value="7" step="0.5">
+          </label>
+          <label class="control-label">
+            <span>Spine Length:</span>
+            <input type="range" id="lengthSlider" min="30" max="80" value="52" step="1">
+          </label>
+          <button class="btn-icon" id="toggleGlow" title="Toggle Skeleton Glow">Glow: ON</button>
+          <button class="btn-icon" id="toggleSound" title="Step SFX">Audio: OFF</button>
+        </div>
+      </div>
+      <div class="hud-hint">
+        Move mouse to lead &bull; Click & hold to sprint &bull; Press <kbd>Space</kbd> to spawn food bait
+      </div>
+    </div>
+  </div>
+
+  <script src="reptile.js"></script>
+</body>
+</html>
